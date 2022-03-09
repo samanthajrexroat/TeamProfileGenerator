@@ -17,8 +17,7 @@ To install the Generator: <ol><li>Clone the repository to your local machine</li
 
 ## Usage
 This application uses the inquirer package to prompt user questions about their development team.  It generates an HTML file that formats the user input into a professional HTML website.
-<!-- View walk through video here - [Screencastify](https://drive.google.com/file/d/1tWZNaLaSKDgV-UohblVVEdnwex9nPzDj/view)<br>
-<img src="./assets/image/samplepage.png"> -->
+<!-- -->
 
 ## Contributing
 To contribute to this application, please email me at <samanthajrexroat@gmail.com>
