@@ -68,14 +68,14 @@ function addEmployee(){
         type: "list",
         name: "choice",
         message: "What would you like to do?",
-        choices: ["Add and employee", "Create roster"]
+        choices: ["Add an employee", "Create roster"]
     })
     .then(data => {
         console.log("You chose: ", data.choice);
         if(data.choice === "Add an employee"){
             prompt(employeePrompt)
             .then(data => {
-                console.log("answers for employee: ", data);
+                console.log("Answers for employee: ", data);
                 if(data.role === "Engineer"){
                     const emp = new Engineer(data.name, data.id, data.email, data.extra);
                     employees.push(emp)
@@ -109,11 +109,11 @@ function createHTML(){
     <title>Team Profile Generator</title>
 </head>
 <body>
-    <header id="dashHead"class="d-flex justify-content-center align-items-center bg-warning bg-gradient text-secondary fw-bolder" style="height: 100px">
+    <header class="d-flex justify-content-center align-items-center bg-warning bg-gradient text-secondary fw-bolder" style="height: 100px">
         <h1>My Team</h1>
     </header>
 
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         ${employees.map(employee => employee.generateHTMLCard(employee.officeNumber || employee.gitHub || employee.school)).join("\n")}
     </div>    
 </body>
