@@ -60,7 +60,7 @@ const employeePrompt = [
 //Empty array to add employees.
 const employees = []
 
-//Main function
+//Command line prompt functionality for engineer and intern.
 function addEmployee(){
     prompt({
         type: "list",
@@ -90,6 +90,13 @@ function addEmployee(){
     });
 }
 
+//Access the global employees array and create dynamic HTML
+function createHTML(){
+    console.log("Creating HTML!");
+    console.log("All of your employees: ", employees);
 
+    const html = ``
 
-
+    fs.writeFileSync("./dist/output.html", html);
+    console.log("HTML generated. Please check the dist directory for your new html!");
+}
