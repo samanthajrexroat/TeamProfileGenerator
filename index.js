@@ -4,6 +4,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const fs = require("fs");
+
 // Manager questions
 const managerPrompt = [
     {
@@ -27,6 +28,7 @@ const managerPrompt = [
         message: "What is the Manager's office number?",
     },
 ];
+
 // Employee questions
 const employeePrompt = [
     {
@@ -100,3 +102,15 @@ function createHTML(){
     fs.writeFileSync("./dist/output.html", html);
     console.log("HTML generated. Please check the dist directory for your new html!");
 }
+
+//Initial function. Manager creation.
+function main(){
+    prompt(managerPrompt).then(data => {
+        console.log(data);
+        const manager = new Manager(data.managerName, data.id, data.email, data.officeNumber);
+        employees.push(manager);
+        addEmployee();
+    })
+}
+
+main();
