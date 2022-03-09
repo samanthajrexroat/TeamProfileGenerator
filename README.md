@@ -17,7 +17,11 @@ To install the Generator: <ol><li>Clone the repository to your local machine</li
 
 ## Usage
 This application uses the inquirer package to prompt user questions about their development team.  It generates an HTML file that formats the user input into a professional HTML website.
-<!-- -->
+
+View a walk through video of the program here:
+* [Google Drive](https://drive.google.com/file/d/1RTSAjjMshhhCZ8ZDkvmn7EDCSmuO0Rp-/view?usp=sharing)
+* [.mov File](./assets/ScreenRecordingTeamProfileGenerator.mov)<br>
+<img src="./assets/ScreenShotTeamProfileGenerator.png">
 
 ## Contributing
 To contribute to this application, please email me at <samanthajrexroat@gmail.com>
