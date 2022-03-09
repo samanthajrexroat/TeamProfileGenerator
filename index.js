@@ -28,6 +28,34 @@ const managerPrompt = [
     },
 ];
 
+const employeePrompt = [
+    {
+        type: "list",
+        name: "role",
+        message: "What is the role of the employee you want to add?",
+        choices: ["Engineer", "Intern"]
+    },
+    {
+        message: (answers)=> `What is the name of the ${answers.role}?`,
+        name: "name",
+    },
+    {
+        message: (answers)=> `What is the id of the ${answers.role}?`,
+        name: "id",
+    },
+    {
+        message: (answers)=> `What is the email of the ${answers.role}?`,
+        name: "email",
+    },
+    {
+        message: (answers)=> {
+            if(answers.role === 'Engineer') return "What is the GitHub username of the engineer?"
+            return "What school does this intern attend?"
+        },
+        name: "extra",
+    },
+];
+
 
 
 
