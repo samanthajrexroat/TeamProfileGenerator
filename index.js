@@ -97,7 +97,27 @@ function createHTML(){
     console.log("Creating HTML!");
     console.log("All of your employees: ", employees);
 
-    const html = ``
+    const html = `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Team Profile Generator</title>
+</head>
+<body>
+    <header id="dashHead"class="d-flex justify-content-center align-items-center bg-warning bg-gradient text-secondary fw-bolder" style="height: 100px">
+        <h1>My Team</h1>
+    </header>
+
+    <div class="container">
+        ${employees.map(employee => employee.generateHTMLCard(employee.officeNumber || employee.gitHub || employee.school)).join("\n")}
+    </div>    
+</body>
+</html>`
 
     fs.writeFileSync("./dist/output.html", html);
     console.log("HTML generated. Please check the dist directory for your new html!");
